@@ -1,9 +1,15 @@
 import React from 'react'
-
-const SubMainCategory=({items})=>{
+import CategoryChild from './category-child'
+import {HeaderTitile}  from './submaincategory-style'
+const SubMainCategory=({id,title,items})=>{
     return(
         <div>
-            <p>subcat</p>
+            <HeaderTitile> {title}</HeaderTitile>
+            <div className="submaincat">
+                {items.map(({id,...otherdata})=>(
+                  <CategoryChild  key={id}  {...otherdata}/>
+                ))}
+            </div>
         </div>
     )
      

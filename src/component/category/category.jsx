@@ -4,10 +4,11 @@ import DATA from '../../data/data'
 const Category=()=>{
     return(
     <div className="home-category">
-        {DATA.map(item=>{
-        
-            <SubMainCategory items={item.items}  />
-        })}
+        {DATA.map(({id,...other})=>(
+          // console.log(item.title)
+               
+            <SubMainCategory key={id} {...other}  />
+        ))}
     </div>
 
     )
