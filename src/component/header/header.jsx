@@ -19,6 +19,9 @@ const Header=()=>{
             <Link to='/profile'>
                 پروفایل
             </Link>
+            <Link to='/signup'>
+                ثبت نام
+            </Link>
         </div>
 
      </div>
