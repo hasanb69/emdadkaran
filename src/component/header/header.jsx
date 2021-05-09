@@ -22,6 +22,9 @@ const Header=()=>{
             <Link to='/signup'>
                 ثبت نام
             </Link>
+            <Link to='/shop'>
+                خدمات
+            </Link>
         </div>
 
      </div>
