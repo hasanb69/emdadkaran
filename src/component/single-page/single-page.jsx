@@ -36,15 +36,16 @@ import DATA from '../../data/data'
 
 
 const SinglePage=({data,history,match})=>{
-console.log(match.params)
+console.log(match.params.url)
 
-//  const le=DATA[match.params].items.length
+ const le=DATA[match.params.cat].items.length
 
-//   for (let i = 0; i < le; i++) {
+
+ for (let i = 0; i < le; i++) {
       
-//   DATA[match.params].items[i].childitems.map(item=>console.log(item))
+ DATA[match.params.cat].items[i].childitems.find(item=>item.url===match.params.url)
   
-//   }
+ }
   
 
 
@@ -78,7 +79,7 @@ console.log(match.params)
                   ))}
 
              */}
-          <p>u</p>
+          <p></p>
          
         </div>
     )

@@ -7,7 +7,7 @@ const Shop=({match})=>{
   return(
       <div>
              <Route path={`${match.path}`} component={Category}   />  
-            <Route path={`${match.path}/:productId/:cat`} component={SinglePage}   />  
+            <Route path={`${match.path}/:cat/:url`} component={SinglePage}   />  
       </div>
   )
 }
