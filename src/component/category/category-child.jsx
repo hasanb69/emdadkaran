@@ -40,12 +40,13 @@
 import React from 'react'
 import {ListContainer,ListItems} from './category-child-style'
 
-import {withRouter,Route,Link,useRouteMatch} from 'react-router-dom'
+import {withRouter,Route,Link,useRouteMatch,useParams} from 'react-router-dom'
 import SinglePage from '../single-page/single-page'
 
 const CategoryChild=({name,linkUrl,childitems,history,match})=>{
-    const { address } = useRouteMatch();
-   
+    const { url } = useRouteMatch();
+    console.log(match.url)
+    const { productId } = useParams();
      return(
          <div className="cildcat">
              <h3  onClick={()=> history.push(`${match.url}${linkUrl}`)}>{name}</h3>
@@ -59,11 +60,13 @@ const CategoryChild=({name,linkUrl,childitems,history,match})=>{
            
                 (   childitems.map(item=>(
                     <ListItems  key={item.id} >
-                  
-                        
-                    
+                 
+                        <Link to={`${url}/${item.cat}/${item.url}`}>
                         <img src={item.imageUrl} />
                         <p>{item.childname}</p>
+                        
+                        </Link>
+                       
                       
                     
                    
@@ -77,8 +80,8 @@ const CategoryChild=({name,linkUrl,childitems,history,match})=>{
             </ListContainer>
            
          
-           
-        
+            {/* <Route path={`${match.url}/:productId`}>  <SinglePage data={childitems} /></Route>
+            <Route exact path={url}> <p>Please select a product.</p> </Route> */}
          </div>
      )
 }

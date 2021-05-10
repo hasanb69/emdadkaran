@@ -38,20 +38,21 @@ const Products = ({ match }) => {
   const { url } = useRouteMatch();
 
   /* Create an array of `<li>` items for each product */
-  const linkList = ProductData.map((product) => {
-    return (
-      <li key={product.id}>
-        <Link to={`${url}/${product.id}`}>{product.name}</Link>
-      </li>
-    );
-  });
+ 
 
   return (
     <div>
       <div>
         <div>
           <h3>Products</h3>
-          <ul>{linkList}</ul>
+          <ul> 
+         { ProductData.map((product) =>(
+           <li key={product.id}>
+             <Link to={`${url}/${product.id}`}>{product.name}</Link>
+           </li>
+          ))}
+           
+         </ul>
         </div>
       </div>
 

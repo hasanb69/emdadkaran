@@ -2,7 +2,7 @@ import React from 'react'
 import {withRouter,Route,useRouteMatch,Link,useParams} from 'react-router-dom'
 import {ListItems} from '../single-page/single-page.style'
 import ProductDetail from '../productdetail/productdetail'
-
+import DATA from '../../data/data'
 // const SinglePage=({id,imageUrl,childname,url,history,match})=>{
 //     const ProductData={imageUrl,childname,url}
 //     const { path } = useRouteMatch();
@@ -36,18 +36,32 @@ import ProductDetail from '../productdetail/productdetail'
 
 
 const SinglePage=({data,history,match})=>{
-    console.log(match.params)
-    // const { path } = useRouteMatch();
+console.log(match.params)
 
-     const { productId } = useParams();
+//  const le=DATA[match.params].items.length
+
+//   for (let i = 0; i < le; i++) {
+      
+//   DATA[match.params].items[i].childitems.map(item=>console.log(item))
+  
+//   }
+  
+
+
+
+//  const product= DATA[match.params].find(item=>item.url==match.params)
+//     console.log(match.params)
+//     // const { path } = useRouteMatch();
+
+//      const { productId } = useParams();
    
-    const product = data.find(p => p.id === Number(productId));
-    if (product) {
-        console.log('find')
-    }
-    else{
-        console.log('not found')
-    }
+    // const product = DATA.find(p => p.id === Number(productId));
+    // if (product) {
+    //     console.log('find')
+    // }
+    // else{
+    //     console.log('not found')
+    // }
 
 
 
@@ -64,7 +78,7 @@ const SinglePage=({data,history,match})=>{
                   ))}
 
              */}
-          <p>{product}</p>
+          <p>u</p>
          
         </div>
     )
