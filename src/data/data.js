@@ -9,6 +9,7 @@ const DATA = {
           id: 1,
           name: 'لوازم خانگی برقی',
           linkUrl:'barghi',
+          subcat:'barghi',
           childitems:[
            { 
             id:1,   
@@ -16,24 +17,26 @@ const DATA = {
             imageUrl: 'https://emdadkaran.com/wp-content/uploads/thumpnailpic/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1-%D9%81%D8%B1%D8%B4-%D8%B4%D9%88-min.png',
             price: 25,
             url:'stove',
-            cat:'homeappliance'
-        
+            cat:'homeappliance',
+            subcat:"barghi"
             },
             { 
             id:2,    
             childname:'تعمیر جارو برقی',   
             imageUrl: 'https://emdadkaran.com/wp-content/uploads/thumpnailpic/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1-%D8%AC%D8%A7%D8%B1%D9%88-%D8%A8%D8%B1%D9%82%DB%8C-min.png',
             price: 25,
-            url:'',
-            cat:'homeappliance'
+            url:'t',
+            cat:'homeappliance',
+            subcat:"barghi"
             },
             { 
             id:3,    
             childname:'تعمیر جارو شارژی',   
             imageUrl: 'https://emdadkaran.com/wp-content/uploads/thumpnailpic/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1-%D8%AC%D8%A7%D8%B1%D9%88-%D8%B4%D8%A7%D8%B1%DA%98%DB%8C-min.png',
             price: 25,
-            url:'',
-            cat:'homeappliance'
+            url:'ee',
+            cat:'homeappliance',
+            subcat:"barghi"
             },
             
           ],
@@ -42,38 +45,44 @@ const DATA = {
         {
             id: 2,
             name: 'لوازم آشپزخانه',
+            linkUrl:'kitchen',
+            subcat:"kitchen",
             childitems:[
              { 
               id:4,   
               childname:'تعمیر یخچال',   
               imageUrl: 'https://emdadkaran.com/wp-content/uploads/thumpnailpic/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1-%DB%8C%D8%AE%DA%86%D8%A7%D9%84-min.png',
               price: 25,
-              url:'',
-              cat:'homeappliance'
+              url:'y',
+              cat:'homeappliance',
+              subcat:"kitchen"
               },
               { 
               id:5,    
               childname:'تعمیر ماشین لباسشویی',   
               imageUrl: 'https://emdadkaran.com/wp-content/uploads/2021/03/6045cbc4ae20c-removebg-preview.png',
               price: 25,
-              url:'',
-              cat:'homeappliance'
+              url:'u',
+              cat:'homeappliance',
+              subcat:"kitchen"
               },
               { 
               id:6,    
               childname:'تعمیر ماشین ظرفشویی',   
               imageUrl: 'https://emdadkaran.com/wp-content/uploads/thumpnailpic/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D8%B8%D8%B1%D9%81%D8%B4%D9%88%DB%8C%DB%8C-min.png',
               price: 25,
-               url:'',
-               cat:'homeappliance'
+               url:'i',
+               cat:'homeappliance',
+               subcat:"kitchen"
               },
               { 
                 id:7,    
                 childname:'تعمیر اجاق گاز',   
                 imageUrl: 'https://emdadkaran.com/wp-content/uploads/thumpnailpic/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1-%D8%A7%D8%AC%D8%A7%D9%82-%DA%AF%D8%A7%D8%B2-min.png',
                 price: 25,
-                url:'',
-                cat:'homeappliance'
+                url:'r',
+                cat:'homeappliance',
+                subcat:"kitchen"
                 },
               
             ],

@@ -1,8 +1,9 @@
 import React from 'react'
 import SubMainCategory from '../category/submaincategory'
-import DATA from '../../data/data'
-const Category=()=>{
-    const collection=Object.keys(DATA).map(key => DATA[key])
+
+import {connect} from 'react-redux'
+const Category=({data})=>{
+    const collection=Object.keys(data).map(key => data[key])
     return(
     <div className="home-category">
         {collection.map(({id,...other})=>(
@@ -12,5 +13,7 @@ const Category=()=>{
 
     )
 }
-
-export default Category
+const mapStateToProps=state=>({
+    data:state.shop.shopdata
+  })
+export default connect(mapStateToProps)(Category)

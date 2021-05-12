@@ -45,11 +45,11 @@ import SinglePage from '../single-page/single-page'
 
 const CategoryChild=({name,linkUrl,childitems,history,match})=>{
     const { url } = useRouteMatch();
-    console.log(match.url)
-    const { productId } = useParams();
+    //console.log(match)
+
      return(
          <div className="cildcat">
-             <h3  onClick={()=> history.push(`${match.url}${linkUrl}`)}>{name}</h3>
+             <h3  onClick={()=> history.push(`${linkUrl}`)}>{name}</h3>
          
              <ListContainer   >
             
@@ -61,7 +61,7 @@ const CategoryChild=({name,linkUrl,childitems,history,match})=>{
                 (   childitems.map(item=>(
                     <ListItems  key={item.id} >
                  
-                        <Link to={`${url}/${item.cat}/${item.url}`}>
+                        <Link to={`${item.cat}/${item.subcat}/${item.url}`}>
                         <img src={item.imageUrl} />
                         <p>{item.childname}</p>
                         
