@@ -8,7 +8,8 @@ const DATA = {
         {
           id: 1,
           name: 'لوازم خانگی برقی',
-          linkUrl:'barghi',
+          linkUrl:'barghiservice',
+          cat:'homeappliance',
           subcat:'barghi',
           childitems:[
            { 
@@ -46,6 +47,7 @@ const DATA = {
             id: 2,
             name: 'لوازم آشپزخانه',
             linkUrl:'kitchen',
+            cat:'homeappliance',
             subcat:"kitchen",
             childitems:[
              { 

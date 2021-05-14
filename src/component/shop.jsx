@@ -1,13 +1,16 @@
 import React from 'react'
 import {withRouter,Route,Link,useRouteMatch} from 'react-router-dom'
-import SinglePage from '../component/single-page/single-page'
-import CategoryChild from '../component/category/category-child'
+import SinglePage from './single-page/single-pages'
 import Category from '../component/category/category'
+import SubCategoryPage from './subcatpage/subcetagory'
 const Shop=({match})=>{
   return(
       <div>
-             <Route path={`${match.path}`} component={Category}   />  
-            <Route path={'/cat/subcat/url'} component={CategoryChild}   />  
+             <Route exact path={`${match.path}`} component={Category}   />  
+
+            
+            <Route path={`${match.path}/:cat/:subcat/:url`} component={SinglePage}   />  
+             
       </div>
   )
 }
