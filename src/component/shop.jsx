@@ -8,7 +8,7 @@ const Shop=({match})=>{
       <div>
              <Route exact path={`${match.path}`} component={Category}   />  
 
-            
+             <Route path={`category/:cat/:linkUrl`} component={SubCategoryPage}   /> 
             <Route path={`${match.path}/:cat/:subcat/:url`} component={SinglePage}   />  
              
       </div>

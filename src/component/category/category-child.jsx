@@ -14,7 +14,7 @@ const CategoryChild=({name,linkUrl,childitems,cat,subcat,history,match})=>{
      return(
          <div className="cildcat">
 
-             <Link to={`${match.path}/${cat}/${linkUrl}`}>
+             <Link to={`category/${cat}/${linkUrl}`}>
              <h3 >{name}</h3>
              </Link>
            
@@ -47,9 +47,10 @@ const CategoryChild=({name,linkUrl,childitems,cat,subcat,history,match})=>{
              }
             </ListContainer>
            
-            <Route path={`${match.path}/:cat/:linkUrl`} component={SubCategoryPage}   /> 
+           
             {/* <Route path={`${match.url}/:productId`}>  <SinglePage data={childitems} /></Route>
             <Route exact path={url}> <p>Please select a product.</p> </Route> */}
+              <Route path={`shops/:cated/:linkUrl`} component={SubCategoryPage}   /> 
          </div>
      )
 }

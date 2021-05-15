@@ -8,6 +8,7 @@ import Profile from './pages/profile/profile'
 import SignUpSignIn from './pages/signup/signup'
 import CategoryChild from './component/category/category-child'
 import Shop from './component/shop'
+import CategoryPage from './pages/category/category-page'
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
            <Route path='/signup'  component={SignUpSignIn}   />
            <Route path='/startorder' component={CategoryChild} />
            <Route path='/shop' component={Shop} />
+           <Route path='/category' component={CategoryPage} />
         </Switch>
        
     </div>

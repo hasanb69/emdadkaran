@@ -6,7 +6,7 @@ const SubCategoryPage=({match,data})=>{
    return(
        <div key={data.id}>
            {data.map(item=>(
-                  <p> {item.price}ff</p>
+                  <p> {item.childname}</p>
 
            ))}
          
