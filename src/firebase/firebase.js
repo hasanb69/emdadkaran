@@ -46,10 +46,10 @@ export const createUserProfileDocument=async(userAuth,aditionalData)=>{
 
   export const convertCollectionsSnapshotToMap = (collections) => {
     const transformedCollection = collections.docs.map((doc) => {
-      const { title, items } = doc.data();
+      const { title, items,routeName} = doc.data();
   
       return {
-        routeName: encodeURI(title.toLowerCase()),
+        routeName: encodeURI(routeName),
         id: doc.id,
         title,
         items,
@@ -57,7 +57,7 @@ export const createUserProfileDocument=async(userAuth,aditionalData)=>{
     });
   
     return transformedCollection.reduce((accumulator, collection) => {
-      accumulator[collection.title.toLowerCase()] = collection;
+      accumulator[collection.routeName.toLowerCase()] = collection;
       return accumulator;
     }, {});
   };

@@ -4,34 +4,24 @@ import {addCollectionAndDocuments} from '../../firebase/firebase'
 import {firestore,convertCollectionsSnapshotToMap } from '../../firebase/firebase'
 import {connect} from 'react-redux'
 import {updatadata} from '../../redux/shop/shop.action'
-const Category=({data,updatadata})=>{
 
-    const collection=Object.keys(data).map(key => data[key])
-useEffect(()=>{
-    const collectionRef = firestore.collection('collections');
-    collectionRef.get().then((snapshot) => {
-        const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-        updatadata(collectionsMap);
-      //  console.log(collectionsMap)
-      },[updatadata]);
-   
-})
-    
 
-   // addCollectionAndDocuments('collections',collection.map(({title,items})=>({title,items})))
+const Category=({data})=>{
+
+
+
+   // addCollectionAndDocuments('collections',collection.map(({title,items,routeName})=>({title,items,routeName})))
     return(
     <div className="home-category">
-        {collection.map(({id,...other})=>(
+        {data.map(({id,...other})=>(
             <SubMainCategory key={id} {...other}  />
         ))}
     </div>
 
     )
 }
-const mapDispatchToProps=dispatch=>({
-    updatadata:collectionMap=>dispatch(updatadata(collectionMap))
-})
+
 const mapStateToProps=state=>({
-    data:state.shop.shopdata
+    data:state.shop.shopdata?Object.keys(state.shop.shopdata).map(key => state.shop.shopdata[key]):[]
   })
-export default connect(mapStateToProps,mapDispatchToProps)(Category)
+export default connect(mapStateToProps)(Category)
