@@ -95,7 +95,7 @@ const DATA = {
     },
 
 
-
+/*
 
    facilitis: {
       id: 2,
@@ -170,7 +170,7 @@ const DATA = {
       ]
     },
 
-
+*/
 
    
     
